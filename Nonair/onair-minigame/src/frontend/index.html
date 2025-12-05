@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON:AIR - 전화 받을까 말까?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>ON:AIR</h1>
+            <p>천천히, 조금씩 익숙해져요</p>
+        </header>
+
+        <main id="game-container">
+            <!-- Game Content Here -->
+            <div id="phone-screen" class="hidden">
+                <div class="caller-info">
+                    <span id="caller-name">Unknown</span>
+                </div>
+                <div class="animation-ring">🔔</div>
+            </div>
+
+            <div id="scenario-text">
+                <!-- LLM Scenario Text -->
+                준비되면 시작 버튼을 눌러주세요.
+            </div>
+
+            <div id="controls">
+                <button id="btn-start">게임 시작</button>
+            </div>
+            
+            <div id="choices" class="hidden">
+                <button class="choice-btn" data-choice="accept">📞 받는다</button>
+                <button class="choice-btn" data-choice="wait">🤔 잠시 후 받는다</button>
+                <button class="choice-btn" data-choice="ignore">🙈 무음으로 넘긴다</button>
+            </div>
+
+            <div id="feedback" class="hidden">
+                <p id="feedback-text"></p>
+                <button id="btn-next">다음 상황</button>
+            </div>
+        </main>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
